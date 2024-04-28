@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Barlow';
+    src: url('./assets/fonts/Barlow-ExtraLight.ttf')
+}
+
+body {
+    font-family: 'Barlow';
+    margin: 0px;
+}
+
+
+/* //MOBILE\\ */
+
+@media (min-width: 320px) {
+    .menu {
+        padding: 18px 27px;
+        font-size: 20px;
+    }
+    .menu__mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu__button {
+        outline: none;
+        border: transparent;
+        background-color: transparent;
+    }
+    .menu__dropdown-mobile--hidden {
+        visibility: hidden;
+        max-height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        transition: visibility 1s linear, opacity 500ms linear, max-height 750ms linear;
+    }
+    .menu__dropdown-mobile--visible {
+        visibility: visible;
+        max-height: 500px;
+        opacity: 1;
+        overflow: hidden;
+        transition: visibility 1s linear, opacity 500ms linear, max-height 1s linear;
+    }
+    .menu__dropdown-mobile--visible div,
+    .menu__dropdown-mobile--hidden div {
+        padding-top: 24px;
+    }
+}
